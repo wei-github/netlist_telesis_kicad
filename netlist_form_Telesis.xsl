@@ -59,7 +59,7 @@
     <xsl:value-of select="@ref"/>
     <xsl:text>.</xsl:text>
     <xsl:value-of select="@pin"/>
-    <xsl:text>,&nl;</xsl:text>
+    <xsl:text> ,&nl;</xsl:text>
 </xsl:template>
 
 </xsl:stylesheet>
