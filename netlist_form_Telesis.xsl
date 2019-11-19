@@ -55,11 +55,14 @@
 
 <!-- for each node -->
 <xsl:template match="node">
+    <xsl:if test="position()>1">
+        <xsl:text> ,&nl;</xsl:text>
+    </xsl:if>
     <xsl:text> </xsl:text>
     <xsl:value-of select="@ref"/>
     <xsl:text>.</xsl:text>
     <xsl:value-of select="@pin"/>
-    <xsl:text> ,&nl;</xsl:text>
+
 </xsl:template>
 
 </xsl:stylesheet>
