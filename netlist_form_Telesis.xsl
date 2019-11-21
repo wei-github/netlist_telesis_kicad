@@ -40,7 +40,8 @@
     <xsl:if test="count(node)>1">
         <xsl:choose>
             <xsl:when test = "@name != '' ">
-                <xsl:value-of select="@name"/>
+                <xsl:variable name="sub1" select="translate(@name, '&#40;', '')"/>
+                <xsl:value-of select="translate($sub1, '&#41;', '')"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:text>N-</xsl:text>
