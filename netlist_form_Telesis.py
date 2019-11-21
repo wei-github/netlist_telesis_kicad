@@ -34,6 +34,8 @@ for net in nets:
     count=len(nodes)
     i=0
     if count>1:
+        name = name.replace("(","")
+        name = name.replace(")","")
         f.write("%s; "%name)
         for node in nodes:
             i=i+1
